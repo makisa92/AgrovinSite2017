@@ -17,6 +17,7 @@
 <link rel="shortcut icon" href="images/icons/icon.png" type="image/x-icon" >
  <!-- Bootstrap CSS  -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/swiper.min.css">
 <!-- Custom Styles -->
 <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
 
@@ -27,13 +28,17 @@
 </head>
 
 <body>
-
+  <!-- Main container -->
   <div class="container">
-  
-    <div class="col-xs-12">
-      <!-- Fixed navbar -->
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
+  <header class="row">
+    <div class="col-xs-6">fewfwe</div>
+    <div class="col-xs-6">ewfweg</div>
+  </header>
+
+  <div class="row">
+ <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
@@ -46,8 +51,8 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -62,33 +67,52 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="../navbar/">Default</a></li>
+              <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
               <li><a href="../navbar-static-top/">Static top</a></li>
-              <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+              <li><a href="../navbar-fixed-top/">Fixed top</a></li>
             </ul>
           </div><!--/.nav-collapse -->
-        </div>
+        </div><!--/.container-fluid -->
       </nav>
-    </div>
-
-    <div class="col-xs-12">
-
-      <!-- Main component for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-        <p>To see the difference between static and fixed top navbars, just scroll.</p>
-        <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar" role="button">View navbar docs &raquo;</a>
-        </p>
       </div>
 
-    </div> <!-- /container -->
-  </div>
+      <div class="row">
+         <!-- Swiper -->
+          <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="images/mainImage.png" class="img-responsive">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/mainImage.png" class="img-responsive">
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="images/mainImage.png" class="img-responsive">
+                  </div>
+              </div>
+              <!-- Add Pagination -->
+              <!-- <div class="swiper-pagination"></div> -->
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+          </div>
+      </div>
+  </div><!-- /container -->
 
 <!-- Scripts -->
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+ <!-- Initialize Swiper -->
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        // pagination: '.swiper-pagination',
+        // paginationClickable: true,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 30
+    });
+    </script>
 
 </body>
 </html>
